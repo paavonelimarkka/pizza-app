@@ -1,6 +1,14 @@
 {% extends "./base_generic.html" %}
 
 {% block content %}
-  <h1>Tää ois se päänäkymä!</h1>
-  <p>Täällä olis pizzatilaukset jne</p>
+
+    <h1>Pizza Time!</h1>
+
+    {% if user.is_authenticated %}
+        <p> Moi {{ user.get_username }}! Valmiina tilaan läskiä?</p>  
+    {% else %}
+        <p>Hei logaappa sissää eka!</p>
+        <a href="{% url 'login'%}?next={{request.path}}">Login</a>   
+    {% endif %}
+
 {% endblock %}
