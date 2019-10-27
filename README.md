@@ -8,3 +8,7 @@ I'm making an application to help adult persons to do so as an exercise.
 
 - Python
 - Django
+
+## References / Learning Material
+
+- https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication
